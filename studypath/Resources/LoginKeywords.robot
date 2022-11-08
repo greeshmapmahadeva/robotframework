@@ -8,12 +8,12 @@ Open my Browser
     Open Browser    ${URL}    ${Browser}
     Maximize Browser Window
 
-Accept Cookies
-    Select Frame    //*[@id='gdpr-consent-notice']
-   Wait Until Element Is Visible    //*[@id='save']    10s
-   Sleep    3s
-    Click Element    //*[@id='save']
-    Unselect Frame
+# Accept Cookies
+#     Select Frame    //*[@id='gdpr-consent-notice']
+#    Wait Until Element Is Visible    //*[@id='save']    10s
+#    Sleep    3s
+#     Click Element    //*[@id='save']
+#     Unselect Frame
 
 Enter username
     [Arguments]    ${username}
