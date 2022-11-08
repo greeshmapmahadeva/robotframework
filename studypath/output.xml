@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20221021 00:15:31.996" rpa="false" schemaversion="3">
+<suite id="s1" name="Handle Alert" source="/home/greeshma/my-robo/studypath/handle_alert.robot">
+<kw name="Navigate to homepage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221021 00:15:32.172" level="INFO">Opening browser 'Chrome' to base url 'https://only-testing-blog.blogspot.com/2014/01/textbox.html'.</msg>
+<status status="PASS" starttime="20221021 00:15:32.171" endtime="20221021 00:15:35.695"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221021 00:15:35.696" endtime="20221021 00:15:35.801"/>
+</kw>
+<status status="PASS" starttime="20221021 00:15:32.170" endtime="20221021 00:15:35.802"/>
+</kw>
+<test id="s1-t1" name="Validate Confirmation on Page" line="33">
+<kw name="Accept cookies">
+<arg>//a[text()="OK"]</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221021 00:15:35.808" level="INFO">Clicking element '//a[text()="OK"]'.</msg>
+<status status="PASS" starttime="20221021 00:15:35.806" endtime="20221021 00:15:35.883"/>
+</kw>
+<status status="PASS" starttime="20221021 00:15:35.805" endtime="20221021 00:15:35.884"/>
+</kw>
+<kw name="Validate Confirmation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[text()='Show Me Confirmation']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221021 00:15:35.887" level="INFO">Clicking element '//button[text()='Show Me Confirmation']'.</msg>
+<status status="PASS" starttime="20221021 00:15:35.887" endtime="20221021 00:15:35.980"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Press 'OK' or 'Cancel' button!</arg>
+<arg>LEAVE</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20221021 00:15:35.980" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20221021 00:15:35.980" endtime="20221021 00:15:35.985"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20221021 00:15:35.985" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20221021 00:15:35.985" endtime="20221021 00:15:35.997"/>
+</kw>
+<status status="PASS" starttime="20221021 00:15:35.885" endtime="20221021 00:15:35.998"/>
+</kw>
+<kw name="Validate Successful Confirmation">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//div[text()="You pressed OK!"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221021 00:15:36.081" level="INFO">Element '//div[text()="You pressed OK!"]' is displayed.</msg>
+<status status="PASS" starttime="20221021 00:15:36.000" endtime="20221021 00:15:36.081"/>
+</kw>
+<status status="PASS" starttime="20221021 00:15:35.999" endtime="20221021 00:15:36.082"/>
+</kw>
+<status status="PASS" starttime="20221021 00:15:35.802" endtime="20221021 00:15:36.082"/>
+</test>
+<status status="PASS" starttime="20221021 00:15:31.997" endtime="20221021 00:15:36.084"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Handle Alert">Handle Alert</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
